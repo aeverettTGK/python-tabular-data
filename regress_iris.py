@@ -47,6 +47,7 @@ if __name__=="__main__":
     iris_file = sys.argv[1]
     species_names = collect_species(iris_file)
     for species in species_names:
+        plt.figure()
         dataframe = create_dataframe(iris_file, species)
         x, y = filter_x_y(dataframe)
         slope, intercept = plot_regression(x, y)
